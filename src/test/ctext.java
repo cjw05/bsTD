@@ -232,9 +232,9 @@ public class ctext extends JFrame implements Runnable{
 		}
 		g.setColor(Color.BLACK);
 		g.drawString(frameRate.getFrameRate(), 30, 30);
-		g.drawString("Press ESC to exit...", 30, 60);
-		g.drawString("Press F10 to resetMap", 30, 90);
-		
+		g.drawString("按ESC退出", 30, 60);
+		g.drawString("按F8开始新的轮次", 30, 90);
+		g.drawString("右键建造，左键选择单位", 30, 120);
 		//攻击范围显示
 		if(ranget){
 		g.setColor(Color.red);
@@ -794,7 +794,7 @@ public class ctext extends JFrame implements Runnable{
 					break;
 				case 0:
 //					ztfk.setFK(n);//在选中位置设置方块
-					ztfk.upgrade(n, nnn);
+					ztfk.setFK(n);
 					nnn++;
 					if(cc.check()){
 						builded.add(n);
